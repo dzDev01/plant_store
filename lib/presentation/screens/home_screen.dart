@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:plant_store/constants/app_colors.dart';
+import 'package:plant_store/presentation/widgets/app_button_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
@@ -22,13 +24,16 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text(
-          "Home Screen",
-          style: TextStyle(
-            color: Colors.black54,
-            fontSize: 20,
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Center(
+          child: AppButtonWidget(
+            buttonColor: AppColors.appGrey,
+            title: "Log in",
+            titleColor: AppColors.appGreen500,
+            useBorder: true,
+            onTap: () {},
           ),
         ),
       ),
