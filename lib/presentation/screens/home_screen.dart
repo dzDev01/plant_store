@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plant_store/constants/app_colors.dart';
 import 'package:plant_store/presentation/widgets/app_button_widget.dart';
+import 'package:plant_store/presentation/widgets/app_input_field_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
@@ -12,6 +13,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final TextEditingController controller = TextEditingController();
+
   @override
   void initState() {
     super.initState();
@@ -26,14 +29,13 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(50),
         child: Center(
-          child: AppButtonWidget(
-            buttonColor: AppColors.appGrey,
-            title: "Log in",
-            titleColor: AppColors.appGreen500,
-            useBorder: true,
-            onTap: () {},
+          child: AppInputFieldWidget(
+            hint: "Search",
+            controller: controller,
+            leading: Icon(Icons.search),
+            action: Icon(Icons.mic),
           ),
         ),
       ),
