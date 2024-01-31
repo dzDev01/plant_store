@@ -41,7 +41,7 @@ class AppButtonWidget extends StatelessWidget {
               style: TextStyle(
                 color: titleColor,
                 fontSize: 16,
-                fontWeight: FontWeight.bold,
+                fontFamily: "MerriWeather",
               ),
             ),
             const SizedBox(width: 10),

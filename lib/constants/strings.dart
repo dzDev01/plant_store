@@ -1,1 +1,1 @@
-const homeScreen = "/"; // edit this route name later
+const mainScreen = "/"; // edit this route name later
