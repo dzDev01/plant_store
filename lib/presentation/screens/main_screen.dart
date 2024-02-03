@@ -7,9 +7,10 @@ import 'package:plant_store/presentation/screens/home_page.dart';
 import 'package:plant_store/presentation/screens/shop_page.dart';
 
 class MainScreen extends StatefulWidget {
-  MainScreen({Key? key}) : super(key: key);
+  const MainScreen({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _MainScreenState createState() {
     return _MainScreenState();
   }
@@ -21,7 +22,7 @@ class _MainScreenState extends State<MainScreen> {
     HomePage(),
     ShopPage(),
     FavoritesPage(),
-    CartPage(),
+    const CartPage(),
     AccountPage(),
   ];
 
