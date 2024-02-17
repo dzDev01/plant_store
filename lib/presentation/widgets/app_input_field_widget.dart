@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:plant_store/config/theme.dart';
 import 'package:plant_store/constants/app_colors.dart';
 
 class AppInputFieldWidget extends StatelessWidget {
   final String hint;
-  final TextEditingController controller;
+  final TextEditingController? controller;
   final Widget? leading;
   final Widget? action;
 
@@ -13,7 +13,7 @@ class AppInputFieldWidget extends StatelessWidget {
     required this.hint,
     this.leading,
     this.action,
-    required this.controller,
+    this.controller,
   }) : super(key: key);
 
   @override
@@ -23,6 +23,7 @@ class AppInputFieldWidget extends StatelessWidget {
       height: 48,
       padding: const EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(
+        color: Colors.white,
         border: Border.all(color: AppColors.appGreen100),
         borderRadius: BorderRadius.circular(8),
       ),
@@ -34,14 +35,14 @@ class AppInputFieldWidget extends StatelessWidget {
             child: TextField(
               controller: controller,
               cursorColor: AppColors.appGrey,
+              style: myTheme().textTheme.bodyMedium,
               decoration: InputDecoration(
                 border: InputBorder.none,
                 hintText: hint,
-                hintStyle: TextStyle(
-                  fontSize: 16,
-                  color: Colors.grey.shade500,
-                  fontWeight: FontWeight.w400,
-                ),
+                hintStyle: myTheme()
+                    .textTheme
+                    .bodyMedium!
+                    .copyWith(color: Colors.grey),
               ),
             ),
           ),

@@ -7,7 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:plant_store/app_routes.dart';
+import 'package:plant_store/config/app_routes.dart';
 
 import 'package:plant_store/main.dart';
 

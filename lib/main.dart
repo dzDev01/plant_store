@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:plant_store/app_routes.dart';
+import 'package:plant_store/config/app_routes.dart';
+import 'package:plant_store/config/theme.dart';
 
 void main() {
   runApp(
@@ -18,6 +19,7 @@ class PlantStoreApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: myTheme(),
       debugShowCheckedModeBanner: false,
       onGenerateRoute: appRoutes.generateRoute,
     );
