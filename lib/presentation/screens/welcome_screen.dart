@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:plant_store/constants/app_colors.dart';
+import 'package:plant_store/constants/responsive.dart';
 import 'package:plant_store/constants/strings.dart';
 
 import '../widgets/widgets.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  WelcomeScreen({Key? key}) : super(key: key);
+  const WelcomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    double deviceWidth = MediaQuery.of(context).size.width;
-    double deviceHeight = MediaQuery.of(context).size.height;
-
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.symmetric(horizontal: deviceWidth * 0.1),
+        padding: EdgeInsets.symmetric(horizontal: ScreenSize.deviceWidth * 0.1),
         height: double.infinity,
-        width: deviceWidth,
+        width: ScreenSize.deviceWidth,
         decoration: const BoxDecoration(
           image: DecorationImage(
               image: AssetImage("assets/images/background.png"),
@@ -37,7 +35,7 @@ class WelcomeScreen extends StatelessWidget {
                     fontSize: 40,
                     color: AppColors.appGreen700),
               ),
-              SizedBox(height: deviceHeight * 0.1),
+              SizedBox(height: ScreenSize.deviceHeight * 0.1),
               const Text(
                 "Join Us",
                 style: TextStyle(
@@ -45,7 +43,7 @@ class WelcomeScreen extends StatelessWidget {
                     fontSize: 16,
                     fontWeight: FontWeight.w700),
               ),
-              SizedBox(height: deviceHeight * 0.03),
+              SizedBox(height: ScreenSize.deviceHeight * 0.03),
               AppButtonWidget(
                   buttonColor: AppColors.appGreen500,
                   title: "Continue",

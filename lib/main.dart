@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plant_store/config/app_routes.dart';
 import 'package:plant_store/config/theme.dart';
+import 'package:plant_store/constants/responsive.dart';
 
 void main() {
   runApp(
@@ -18,6 +19,8 @@ class PlantStoreApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    //? Initialize the ScreenSize class
+    ScreenSize.init(context);
     return MaterialApp(
       theme: myTheme(),
       debugShowCheckedModeBanner: false,

@@ -26,8 +26,9 @@ class AppRoutes {
       // Route For Home Screen
       case mainScreen:
         return MaterialPageRoute(
-          builder: (context) => MainScreen(),
+          builder: (context) => const MainScreen(),
         );
     }
+    return null;
   }
 }
