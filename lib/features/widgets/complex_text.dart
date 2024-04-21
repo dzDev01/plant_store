@@ -1,8 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:plant_store/constants/app_colors.dart';
+import 'package:plant_store/core/utils/constants/app_colors.dart';
 
-import '../../config/theme.dart';
+import '../../core/utils/config/theme.dart';
 
 class ComplexText extends StatelessWidget {
   final String title;

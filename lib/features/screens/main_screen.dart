@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:plant_store/constants/app_colors.dart';
-import 'package:plant_store/presentation/screens/Account_page.dart';
-import 'package:plant_store/presentation/screens/cart_page.dart';
-import 'package:plant_store/presentation/screens/favorites_page.dart';
-import 'package:plant_store/presentation/screens/home_page.dart';
-import 'package:plant_store/presentation/screens/shop_page.dart';
+import 'package:plant_store/core/utils/constants/app_colors.dart';
+import 'package:plant_store/features/screens/account_page.dart';
+import 'package:plant_store/features/screens/cart_page.dart';
+import 'package:plant_store/features/screens/favorites_page.dart';
+import 'package:plant_store/features/screens/home_page.dart';
+import 'package:plant_store/features/screens/shop_page.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -23,7 +23,7 @@ class _MainScreenState extends State<MainScreen> {
     ShopPage(),
     const FavoritesPage(),
     const CartPage(),
-    const AccountPage(),
+    const AccountView(),
   ];
 
   @override

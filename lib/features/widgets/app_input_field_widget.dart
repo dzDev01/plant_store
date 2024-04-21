@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:plant_store/config/theme.dart';
-import 'package:plant_store/constants/app_colors.dart';
+import 'package:plant_store/core/utils/config/theme.dart';
+import 'package:plant_store/core/utils/constants/app_colors.dart';
 
 class AppInputFieldWidget extends StatelessWidget {
   final String hint;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:plant_store/constants/app_colors.dart';
+import 'package:plant_store/core/utils/constants/app_colors.dart';
 
 class SocialIconButton extends StatelessWidget {
   final String iconPath;

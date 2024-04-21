@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:plant_store/constants/app_colors.dart';
-import 'package:plant_store/constants/responsive.dart';
-import 'package:plant_store/constants/strings.dart';
+import 'package:plant_store/core/utils/constants/app_colors.dart';
+import 'package:plant_store/core/utils/constants/responsive.dart';
+import 'package:plant_store/core/utils/constants/strings.dart';
 
 import '../widgets/widgets.dart';
 

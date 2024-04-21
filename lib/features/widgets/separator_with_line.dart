@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../config/theme.dart';
+import '../../core/utils/config/theme.dart';
 
 class SeparatorWithLine extends StatelessWidget {
   final String? title;
