@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:plant_store/core/utils/constants/app_colors.dart';
-import 'package:plant_store/features/screens/account_page.dart';
-import 'package:plant_store/features/screens/cart_page.dart';
-import 'package:plant_store/features/screens/favorites_page.dart';
-import 'package:plant_store/features/screens/home_page.dart';
-import 'package:plant_store/features/screens/shop_page.dart';
+import 'package:plant_store/features/user/presentation/view/account_page.dart';
+import 'package:plant_store/features/shop/presentation/view/cart_page.dart';
+import 'package:plant_store/features/shop/presentation/view/favorites_page.dart';
+import 'package:plant_store/features/home/presentation/view/home_page.dart';
+import 'package:plant_store/features/shop/presentation/view/shop_page.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -20,7 +20,7 @@ class _MainScreenState extends State<MainScreen> {
   int pageIndex = 0;
   final List<Widget> pages = [
     const HomePage(),
-    ShopPage(),
+    const ShopPage(),
     const FavoritesPage(),
     const CartPage(),
     const AccountView(),

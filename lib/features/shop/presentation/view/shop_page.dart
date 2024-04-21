@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ShopPage extends StatefulWidget {
-  ShopPage({Key? key}) : super(key: key);
+  const ShopPage({Key? key}) : super(key: key);
 
   @override
   _ShopPageState createState() {
@@ -23,7 +23,7 @@ class _ShopPageState extends State<ShopPage> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Scaffold(
+    return const Scaffold(
       body: Center(
           child: Text(
         "Shop Page",

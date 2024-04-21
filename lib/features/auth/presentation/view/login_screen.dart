@@ -1,19 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:plant_store/core/utils/constants/app_colors.dart';
 import 'package:plant_store/core/utils/constants/strings.dart';
 
-import '../../core/utils/constants/app_colors.dart';
-import '../widgets/widgets.dart';
+import '../../../../core/widgets/widgets.dart';
 
-class SignUpScreen extends StatefulWidget {
-  SignUpScreen({Key? key}) : super(key: key);
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
+  _LoginScreenState createState() {
+    return _LoginScreenState();
+  }
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
+class _LoginScreenState extends State<LoginScreen> {
   late double deviceWidth, deviceHeight;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +44,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(height: deviceHeight * 0.1),
+                _buildAppName(),
                 _buildLoginBox(),
               ],
             ),
@@ -42,20 +54,30 @@ class _SignUpScreenState extends State<SignUpScreen> {
     );
   }
 
-  Form _buildSignUpForm() {
+  Widget _buildAppName() {
+    return Container(
+      padding: EdgeInsets.all(deviceWidth * 0.05),
+      height: deviceHeight * 0.17,
+      child: const Center(
+        child: Text(
+          "Flowerfly!",
+          style: TextStyle(
+              fontFamily: "Pacifico",
+              fontSize: 40,
+              color: AppColors.appGreen700),
+        ),
+      ),
+    );
+  }
+
+  Form _buildLoginForm() {
     return Form(
       key: _formKey,
       child: Column(
         children: [
-          AppInputFieldWidget(hint: "First name"),
-          SizedBox(height: deviceHeight * 0.02),
-          AppInputFieldWidget(hint: "Last Name"),
-          SizedBox(height: deviceHeight * 0.02),
           AppInputFieldWidget(hint: "Email"),
           SizedBox(height: deviceHeight * 0.02),
           AppInputFieldWidget(hint: "Password"),
-          SizedBox(height: deviceHeight * 0.02),
-          AppInputFieldWidget(hint: "Confirm password"),
         ],
       ),
     );
@@ -81,7 +103,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               const Align(
                 alignment: Alignment.topLeft,
                 child: Text(
-                  "Sign Up",
+                  "Log in",
                   style: TextStyle(
                       color: AppColors.appGreen700,
                       fontWeight: FontWeight.bold,
@@ -90,11 +112,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ),
               SizedBox(height: deviceHeight * 0.04),
-              _buildSignUpForm(),
+              _buildLoginForm(),
               SizedBox(height: deviceHeight * 0.02),
+              ComplexText(
+                title: "Forgot your password? ",
+                clickedText: "Click Here",
+                onTap: () {},
+              ),
+              SizedBox(height: deviceHeight * 0.03),
               AppButtonWidget(
                   buttonColor: AppColors.appGreen500,
-                  title: "Sign Up",
+                  title: "Log in",
                   titleColor: Colors.white,
                   onTap: () {},
                   useBorder: false),
@@ -124,15 +152,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 buttonColor: AppColors.appGrey,
                 title: "Continue as a guest",
                 titleColor: AppColors.appGreen500,
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, mainScreen);
+                },
                 useBorder: true,
               ),
               SizedBox(height: deviceHeight * 0.03),
               ComplexText(
-                title: "Already have an account? ",
-                clickedText: "Log in",
+                title: "Don't have an account? ",
+                clickedText: "Sign up",
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.pushNamed(context, signUpScreenString);
                 },
               ),
             ],

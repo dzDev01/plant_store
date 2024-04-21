@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:plant_store/features/screens/login_screen.dart';
-import 'package:plant_store/features/screens/main_screen.dart';
-import 'package:plant_store/features/screens/sign_up_screen.dart';
-import 'package:plant_store/features/screens/welcome_screen.dart';
+import 'package:plant_store/features/auth/presentation/view/login_screen.dart';
+import 'package:plant_store/features/home/presentation/view/main_screen.dart';
+import 'package:plant_store/features/auth/presentation/view/sign_up_screen.dart';
+import 'package:plant_store/features/splash/presentation/view/welcome_screen.dart';
 
 import '../constants/strings.dart';
 
@@ -13,7 +13,7 @@ class AppRoutes {
     switch (settings.name) {
       case welcomeScreenString:
         return MaterialPageRoute(
-          builder: (context) => WelcomeScreen(),
+          builder: (context) => const WelcomeScreen(),
         );
       case loginScreenString:
         return MaterialPageRoute(

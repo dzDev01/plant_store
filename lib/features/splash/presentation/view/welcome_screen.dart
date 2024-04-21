@@ -3,7 +3,7 @@ import 'package:plant_store/core/utils/constants/app_colors.dart';
 import 'package:plant_store/core/utils/constants/responsive.dart';
 import 'package:plant_store/core/utils/constants/strings.dart';
 
-import '../widgets/widgets.dart';
+import '../../../../core/widgets/widgets.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
