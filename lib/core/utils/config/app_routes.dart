@@ -17,7 +17,7 @@ class AppRoutes {
         );
       case loginScreenString:
         return MaterialPageRoute(
-          builder: (context) => LoginScreen(),
+          builder: (context) => const LoginScreen(),
         );
       case signUpScreenString:
         return MaterialPageRoute(

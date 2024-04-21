@@ -13,7 +13,6 @@ void main() {
 
 class PlantStoreApp extends StatelessWidget {
   final AppRoutes appRoutes;
-
   const PlantStoreApp({super.key, required this.appRoutes});
   @override
   Widget build(BuildContext context) {

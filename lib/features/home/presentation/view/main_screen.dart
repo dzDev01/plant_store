@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plant_store/core/utils/constants/app_colors.dart';
-import 'package:plant_store/features/user/presentation/view/account_page.dart';
+import 'package:plant_store/features/account/presentation/view/account_page.dart';
 import 'package:plant_store/features/shop/presentation/view/cart_page.dart';
 import 'package:plant_store/features/shop/presentation/view/favorites_page.dart';
 import 'package:plant_store/features/home/presentation/view/home_page.dart';
