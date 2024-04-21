@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:plant_store/core/utils/constants/strings.dart';
 
 import '../../../../core/utils/constants/app_colors.dart';
 import '../../../../core/widgets/widgets.dart';
